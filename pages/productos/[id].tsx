@@ -1,5 +1,6 @@
 import { MinusSmIcon, PlusSmIcon } from '@heroicons/react/outline';
-import { useShoppingCart, products } from '@hooks/useShoppingCart';
+import { useShoppingCart } from '@hooks/useShoppingCart';
+import { products } from 'products';
 import { useState, useEffect, useRef, FC } from 'react';
 import ImageCard from 'public/restaurantCard.png';
 import { formatCurrency } from '@libs/utils';
