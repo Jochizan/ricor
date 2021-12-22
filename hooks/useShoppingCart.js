@@ -1,6 +1,10 @@
 import { TYPES } from '../actions/shoppingActions';
 import useLocalStorageReducer from './useLocalStorageReducer';
 import { createContext, useMemo, useContext } from 'react';
+import pachamanca1 from 'public/saucer/pachamanca1.png';
+import pachamanca2 from 'public/saucer/pachamanca2.png';
+import pachamanca3 from 'public/saucer/pachamanca3.png';
+import pachamanca4 from 'public/saucer/pachamanca4.png';
 
 export const products = [
   {
@@ -10,7 +14,7 @@ export const products = [
     currency: 'PEN',
     description:
       '3 papas, Porción de habas, 1 humita, 1 presa (pollo, chancho, carnero)',
-    image: '/saucer/pachamanca1.png',
+    image: pachamanca1,
     rating: {
       count: 100,
       rate: 4.5
@@ -23,7 +27,7 @@ export const products = [
     currency: 'PEN',
     description:
       '3 papas, Porción de habas, 1 humita, 2 presas (pollo, chancho, carnero)',
-    image: '/saucer/pachamanca2.png',
+    image: pachamanca2,
     rating: {
       count: 90,
       rate: 4.5
@@ -36,7 +40,7 @@ export const products = [
     currency: 'PEN',
     description:
       '3 papas, Porción de habas, 1 humita, 3 presas (pollo, chancho, carnero)',
-    image: '/saucer/pachamanca3.png',
+    image: pachamanca3,
     rating: {
       count: 90,
       rate: 4.6
@@ -48,7 +52,7 @@ export const products = [
     price: 3100,
     currency: 'PEN',
     description: '3 papas, Porción de habas, 1 humita, 1 presa (cuy)',
-    image: '/saucer/pachamanca4.png',
+    image: pachamanca4,
     rating: {
       count: 100,
       rate: 4.9

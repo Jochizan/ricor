@@ -2,12 +2,21 @@ import ProductCard from '@components/ProductCard';
 import ImageCard from 'public/restaurantCard.png';
 import Meta from '@components/Meta';
 import type { NextPage } from 'next';
-import { products } from '@hooks/useShoppingCart';
+import { products as oldProducts } from '@hooks/useShoppingCart';
+import pachamanca1 from 'public/saucer/pachamanca1.png';
+import pachamanca2 from 'public/saucer/pachamanca2.png';
+import pachamanca3 from 'public/saucer/pachamanca3.png';
+import pachamanca4 from 'public/saucer/pachamanca4.png';
 import { useState } from 'react';
 
 const ProductsPage: NextPage = () => {
   const [disabled, setDisabled] = useState(false);
+  const images = [pachamanca1, pachamanca2, pachamanca3, pachamanca4];
 
+  const products = oldProducts.map((product, idx) => {
+    product.image = images[idx];
+    return product;
+  });
 
   return (
     <main
