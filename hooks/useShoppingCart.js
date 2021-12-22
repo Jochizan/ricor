@@ -1,7 +1,64 @@
 import { TYPES } from '../actions/shoppingActions';
 import useLocalStorageReducer from './useLocalStorageReducer';
 import { createContext, useMemo, useContext } from 'react';
-import products from 'products';
+import pachamanca1 from 'public/saucer/pachamanca1.png';
+import pachamanca2 from 'public/saucer/pachamanca2.png';
+import pachamanca3 from 'public/saucer/pachamanca3.png';
+import pachamanca4 from 'public/saucer/pachamanca4.png';
+
+export const products = [
+  {
+    id: 'price_1K9KjTKfLWhjfm3aPRArFor9',
+    name: 'Pachamanca con una presa',
+    price: 2200,
+    currency: 'PEN',
+    description:
+      '3 papas, Porción de habas, 1 humita, 1 presa (pollo, chancho, carnero)',
+    image: pachamanca1,
+    rating: {
+      count: 100,
+      rate: 4.5
+    }
+  },
+  {
+    id: 'price_1K9KmIKfLWhjfm3akh4Gdm3U',
+    name: 'Pachamanca con dos presas',
+    price: 3100,
+    currency: 'PEN',
+    description:
+      '3 papas, Porción de habas, 1 humita, 2 presas (pollo, chancho, carnero)',
+    image: pachamanca2,
+    rating: {
+      count: 90,
+      rate: 4.5
+    }
+  },
+  {
+    id: 'price_1K9KnZKfLWhjfm3apt7slt8j',
+    name: 'Pachamanca con tres presas',
+    price: 4000,
+    currency: 'PEN',
+    description:
+      '3 papas, Porción de habas, 1 humita, 3 presas (pollo, chancho, carnero)',
+    image: pachamanca3,
+    rating: {
+      count: 90,
+      rate: 4.6
+    }
+  },
+  {
+    id: 'price_1K9KpqKfLWhjfm3aIhOctGL6',
+    name: 'Pachamanca con presa de cuy',
+    price: 3100,
+    currency: 'PEN',
+    description: '3 papas, Porción de habas, 1 humita, 1 presa (cuy)',
+    image: pachamanca4,
+    rating: {
+      count: 100,
+      rate: 4.9
+    }
+  }
+];
 
 export const shoppingInitialState = {
   products,
@@ -17,7 +74,6 @@ export function shoppingReducer(state, action) {
       let newItem = state.products.find(
         (product) => product.id === action.payload.id
       );
-      console.log(action.payload)
 
       let itemInCart = state.cart.find((item) => item.id === newItem.id);
 

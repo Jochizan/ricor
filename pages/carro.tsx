@@ -10,7 +10,7 @@ import {
   XCircleIcon,
   MinusSmIcon,
   PlusSmIcon,
-  XIcon,
+  XIcon
 } from '@heroicons/react/outline';
 import ImageCart from 'public/misc.png';
 import Meta from '@components/Meta';
@@ -38,7 +38,7 @@ const CartPage: NextPage = () => {
 
   return (
     <main
-      className='flex-grow flex justify-center p-4 bg-fixed'
+      className='flex-grow flex justify-center items-center p-4 bg-fixed'
       style={{
         backgroundImage: 'url(' + ImageCart.src + ')',
         backgroundRepeat: 'no-repeat',
@@ -57,7 +57,7 @@ const CartPage: NextPage = () => {
                 {cartCount > 1 ? 's' : ''}{' '}
                 <button
                   onClick={clearCart}
-                  className='opacity-50 hover:opacity-100 text-base capitalize'
+                  className='opacity-50 hover:opacity-100 font-medium text-base capitalize'
                 >
                   (Limpiar Todo)
                 </button>
@@ -123,10 +123,13 @@ const CartPage: NextPage = () => {
                       </button>
                     </div>
 
-                    {/* Price */}
-                    <p className='font-semibold text-xl ml-16'>
-                      <XIcon className='w-4 h-4 text-stone-500 inline-block' />
+                    <p className='font-semibold text-xl ml-6'>
+                      <XIcon className='w-4 h-4 text-stone-700 dark:text-stone-100 inline-block' />{' '}
                       {formatCurrency(product.price)}
+                    </p>
+                    {/* SubPrice */}
+                    <p className='font-semibold text-xl ml-6'>
+                      = {formatCurrency(product.price * product.quantity)}
                     </p>
 
                     {/* Remove item */}
@@ -141,23 +144,20 @@ const CartPage: NextPage = () => {
               ))}
 
               <div className='flex justify-end items-center border-t py-4 mt-8 text-stone-700 dark:text-stone-100 border-slate-700 dark:border-slate-200'>
-                <div className='mr-2'>
-                  <p>
-                    <p className='text-xl mb-4 text-stone-700 dark:text-stone-100'>
-                      Mesa:
-                      <span className='font-semibold'></span>
-                    </p>
+                <div className='mr-6'>
+                  <p className='text-xl font-medium text-stone-700 dark:text-stone-100'>
+                    Mesa: <span className='font-semibold'>01</span>
                   </p>
-                  <Link href='/mesas'>
-                    <a className='border font-medium rounded py-2 px-6 bg-yellow-500 hover:bg-yellow-600 border-yellow-500 hover:border-yellow-600 focus:ring-4 focus:ring-opacity-50 focus:ring-yellow-500 text-stone-700 dark:text-stone-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-yellow-500 max-w-max mt-4'>
-                      seleccione su mesa
-                    </a>
+                  <Link href='/mesas' passHref>
+                    <button className='border font-medium rounded py-2 px-6 bg-yellow-500 hover:bg-yellow-600 border-yellow-500 hover:border-yellow-600 focus:ring-4 focus:ring-opacity-50 focus:ring-yellow-500 text-stone-700 dark:text-stone-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-yellow-500 max-w-max mt-4'>
+                      Seleccione su mesa
+                    </button>
                   </Link>
                 </div>
                 <div>
-                  <p className='text-xl text-stone-700 dark:text-stone-100'>
+                  <p className='text-xl font-medium text-stone-700 dark:text-stone-100'>
                     Total:{' '}
-                    <span className='font-semibold'>
+                    <span className='font-bold'>
                       {formatCurrency(totalPrice)}
                     </span>
                   </p>
@@ -165,9 +165,9 @@ const CartPage: NextPage = () => {
                   <button
                     onClick={redirectToCheckout}
                     disabled={redirecting}
-                    className='border font-medium rounded py-2 px-6 bg-yellow-500 hover:bg-yellow-600 border-yellow-500 hover:border-yellow-600 focus:ring-4 focus:ring-opacity-50 focus:ring-yellow-500 text-stone-700 dark:text-stone-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-yellow-500 max-w-max mt-4'
+                    className='border font-semibold rounded py-2 px-6 bg-yellow-500 hover:bg-yellow-600 border-yellow-500 hover:border-yellow-600 focus:ring-4 focus:ring-opacity-50 focus:ring-yellow-500 text-stone-700 dark:text-stone-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-yellow-500 max-w-max mt-4'
                   >
-                    {redirecting ? 'Redirigiendo...' : 'Ir a Pagar'}
+                    {redirecting ? 'Redirigiendo...' : 'Ir a pagar'}
                   </button>
                 </div>
               </div>

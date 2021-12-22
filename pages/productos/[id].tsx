@@ -1,12 +1,11 @@
 import { MinusSmIcon, PlusSmIcon } from '@heroicons/react/outline';
-import { useShoppingCart } from '@hooks/useShoppingCart';
+import { useShoppingCart, products } from '@hooks/useShoppingCart';
 import { useState, useEffect, useRef, FC } from 'react';
 import ImageCard from 'public/restaurantCard.png';
 import { formatCurrency } from '@libs/utils';
 import { useRouter } from 'next/router';
 import { toast } from 'react-hot-toast';
 import Image from 'next/image';
-import products from 'products';
 import Meta from '@components/Meta';
 
 const Product: FC<any> = (props) => {
@@ -42,7 +41,7 @@ const Product: FC<any> = (props) => {
 
   return (
     <main
-      className='flex-grow flex justify-center p-4 bg-fixed'
+      className='flex-grow flex justify-center items-center p-4 bg-fixed'
       style={{
         backgroundImage: 'url(' + ImageCard.src + ')',
         backgroundRepeat: 'no-repeat',
@@ -78,46 +77,57 @@ const Product: FC<any> = (props) => {
               <div className='flex-1 max-w-md border border-opacity-50 rounded-md shadow-lg p-6 border-slate-700 dark:border-slate-200'>
                 <h2 className='text-3xl font-semibold'>{props.name}</h2>
                 <p>
-                  <span className='text-stone-700 dark:text-stone-100'>
-                    Availability:
+                  <span className='text-stone-700 dark:text-stone-100 font-medium'>
+                    Disponibilidad:
                   </span>{' '}
-                  <span className='font-semibold'>In stock</span>
+                  <span className='font-medium'>En stock</span>
+                </p>
+                <p>
+                  <span className='text-stone-700 dark:text-stone-100 font-medium'>
+                    Descripción:
+                  </span>{' '}
+                  <span className='font-normal'>{props.description}</span>
                 </p>
 
                 {/* Price */}
-                <div className='mt-8 border-t pt-4 border-slate-700 dark:border-slate-200'>
-                  <p className='text-stone-700 dark:text-stone-100'>Price:</p>
-                  <p className='text-xl font-semibold'>
-                    {formatCurrency(props.price)}
-                  </p>
-                </div>
-
-                <div className='mt-4 border-t pt-4 border-slate-700 dark:border-slate-200'>
-                  {/* Quantity */}
-                  <p className='text-stone-700 dark:text-stone-100'>
-                    Quantity:
-                  </p>
-                  <div className='mt-1 flex items-center space-x-3'>
-                    <button
-                      onClick={() => setQty((prev) => prev - 1)}
-                      disabled={qty <= 1}
-                      className='disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-current hover:bg-red-500 hover:text-red-200 rounded-md p-1
-                      '
-                    >
-                      <MinusSmIcon className='w-6 h-6 flex-shrink-0' />
-                    </button>
-                    <p className='font-semibold text-xl'>{qty}</p>
-                    <button
-                      onClick={() => setQty((prev) => prev + 1)}
-                      className='
-                      hover:bg-green-500 hover:text-green-200 rounded-md p-1 text-stone-700 dark:text-stone-100
-                      '
-                    >
-                      <PlusSmIcon className='w-6 h-6 flex-shrink-0 ' />
-                    </button>
+                <div className='lg:flex w-100 justify-around items-center'>
+                  <div className='mt-8 border-t pt-4 border-slate-700 dark:border-slate-200'>
+                    <p className='text-stone-700 dark:text-stone-100 font-medium'>
+                      Precio:
+                    </p>
+                    <p className='text-xl font-semibold'>
+                      {formatCurrency(props.price * qty)}
+                    </p>
                   </div>
 
-                  {/* Add to cart button */}
+                  <div className='mt-8 border-t pt-4 border-slate-700 dark:border-slate-200'>
+                    {/* Quantity */}
+                    <p className='text-stone-700 dark:text-stone-100 font-medium'>
+                      Cantidad:
+                    </p>
+                    <div className='mt-1 flex items-center space-x-3'>
+                      <button
+                        onClick={() => setQty((prev) => prev - 1)}
+                        disabled={qty <= 1}
+                        className='disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-current hover:bg-red-500 hover:text-red-200 rounded-md p-1
+                      '
+                      >
+                        <MinusSmIcon className='w-6 h-6 flex-shrink-0' />
+                      </button>
+                      <p className='font-semibold text-xl'>{qty}</p>
+                      <button
+                        onClick={() => setQty((prev) => prev + 1)}
+                        className='
+                      hover:bg-green-500 hover:text-green-200 rounded-md p-1 text-stone-700 dark:text-stone-100
+                      '
+                      >
+                        <PlusSmIcon className='w-6 h-6 flex-shrink-0 ' />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                {/* Add to cart button */}
+                <div className='flex justify-center'>
                   <button
                     type='button'
                     onClick={handleOnAddToCart}

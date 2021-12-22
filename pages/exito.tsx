@@ -41,22 +41,38 @@ const SuccessPage: NextPage = () => {
       <div className='mt-16 h-min w-screen-lg bg-amber-300 dark:bg-amber-900 px-4 rounded-lg'>
         <div className='container xl:max-w-screen-xl mx-auto py-12 px-6 text-center'>
           {error ? (
-            <div className='p-2 rounded-md bg-rose-100 text-rose-500 max-w-md mx-auto'>
-              <Meta title='Ricor' description='Pago fallido ��' />
-              <p className='text-lg'>Lo siento, algo salio mal!</p>
+            <div className='py-2 px-4 rounded-md bg-red-600 max-w-md mx-auto'>
+              <Meta
+                title='Ricor'
+                description='Pago fallido 😒😒'
+                image={ImageCart}
+              />
+              <p className='text-xl font-medium text-stone-700 dark:text-stone-100'>
+                Lo siento, algo salio mal!
+              </p>
+              <p className='text-4xl'>😔😔😤😤</p>
             </div>
           ) : !data ? (
-            <div className='p-2 rounded-md bg-gray-100 text-gray-500 max-w-md mx-auto'>
-              <p className='text-lg animate-pulse'>Cargando...</p>
+            <div className='p-2 rounded-md bg-yellow-600 max-w-md mx-auto'>
+              <p className='text-xl animate-pulse font-medium  text-stone-700 dark:text-stone-100'>
+                Cargando...
+              </p>
             </div>
           ) : (
-            <div className='py-4 px-8 rounded-md bg-gray-100 max-w-lg mx-auto'>
+            <div className='py-4 px-8 rounded-md bg-green-600 max-w-lg mx-auto'>
               <h2 className='text-4xl font-semibold flex flex-col items-center space-x-1'>
-                <Meta title='Ricor' description='Pago exitoso ��' />
-                <CheckIcon className='w-12 h-12 flex-shrink-0 text-green-600' />
-                <span>Gracias por su orden! ��</span>
+                <Meta
+                  title='Ricor'
+                  description='Pago exitoso 😊😊'
+                  image={ImageCart}
+                />
+                <CheckIcon className='w-12 h-12 flex-shrink-0 text-white' />
+                <span className='font-medium'>Gracias por su orden!</span>
               </h2>
-              {/* <p className='text-lg mt-3'>.</p> */}
+              <p className='text-4xl'>👌👌😘😘</p>
+              <p className='text-xl mt-3 text-stone-700 dark:text-stone-100'>
+                Le llegara una confirmación a su correo
+              </p>
             </div>
           )}
         </div>
