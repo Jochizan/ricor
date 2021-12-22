@@ -17,6 +17,7 @@ export function shoppingReducer(state, action) {
       let newItem = state.products.find(
         (product) => product.id === action.payload.id
       );
+      console.log(action.payload)
 
       let itemInCart = state.cart.find((item) => item.id === newItem.id);
 

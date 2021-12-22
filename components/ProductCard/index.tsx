@@ -17,13 +17,12 @@ const ProductCard: FC<any> = (props) => {
     e.preventDefault();
 
     setAdding(true);
-    toastId.current = toast.loading('Se añadio un elemento...');
+    toastId.current = toast.loading('Se esta añadio un elemento...');
 
     if (typeof props.onClickAdd === 'function') {
       props.onClickAdd();
     }
 
-    console.log(props.id)
     addItem(props.id);
   };
 
@@ -49,7 +48,7 @@ const ProductCard: FC<any> = (props) => {
   return (
     <Link href={`/productos/${props.id}`} passHref>
       <a className='border p-6 group bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 dark:from-yellow-600 dark:via-amber-600 dark:to-orange-600 rounded-lg shadow-md shadow-yellow-500/50 cursor-pointer font-medium border-slate-700 dark:border-slate-200'>
-        <div className='relative w-full h-52 group-hover:transform group-hover:scale-125 group-hover:ease-in-out group-hover:duration-500'>
+        <div className='relative w-full h-52 group-hover:transform group-hover:scale-110 group-hover:ease-in-out group-hover:duration-500'>
           <Image
             src={props.image}
             alt={props.name}

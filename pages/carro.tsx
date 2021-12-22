@@ -53,7 +53,8 @@ const CartPage: NextPage = () => {
             <>
               <h2 className='text-4xl font-semibold'>Este es su carrito</h2>
               <p className='mt-1 text-xl'>
-                {cartCount + ' plato'}{cartCount > 1 ? 's' : ''}{' '}
+                {cartCount + ' plato'}
+                {cartCount > 1 ? 's' : ''}{' '}
                 <button
                   onClick={clearCart}
                   className='opacity-50 hover:opacity-100 text-base capitalize'
@@ -142,18 +143,16 @@ const CartPage: NextPage = () => {
               <div className='flex justify-end items-center border-t py-4 mt-8 text-stone-700 dark:text-stone-100 border-slate-700 dark:border-slate-200'>
                 <div className='mr-2'>
                   <p>
-                    <p className='text-xl text-stone-700 dark:text-stone-100'>
+                    <p className='text-xl mb-4 text-stone-700 dark:text-stone-100'>
                       Mesa:
                       <span className='font-semibold'></span>
                     </p>
                   </p>
-                  <button
-                    onClick={redirectToCheckout}
-                    disabled={redirecting}
-                    className='border font-medium rounded py-2 px-6 bg-yellow-500 hover:bg-yellow-600 border-yellow-500 hover:border-yellow-600 focus:ring-4 focus:ring-opacity-50 focus:ring-yellow-500 text-stone-700 dark:text-stone-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-yellow-500 max-w-max mt-4'
-                  >
-                    seleccione su mesa
-                  </button>
+                  <Link href='/mesas'>
+                    <a className='border font-medium rounded py-2 px-6 bg-yellow-500 hover:bg-yellow-600 border-yellow-500 hover:border-yellow-600 focus:ring-4 focus:ring-opacity-50 focus:ring-yellow-500 text-stone-700 dark:text-stone-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-yellow-500 max-w-max mt-4'>
+                      seleccione su mesa
+                    </a>
+                  </Link>
                 </div>
                 <div>
                   <p className='text-xl text-stone-700 dark:text-stone-100'>

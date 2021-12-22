@@ -1,90 +1,51 @@
 const products = [
   {
-    id: 'price_1JAE9cEy9j6mAC9ettoD2R0D',
-    name: 'Kentiapalm (L)',
-    price: 3995,
-    currency: 'USD',
-    image: '/plants/kentiapalm.png',
+    id: 'price_1K9KjTKfLWhjfm3aPRArFor9',
+    name: 'Pachamanca con una presa',
+    price: 2200,
+    currency: 'PEN',
+    description:
+      '3 papas, Porción de habas, 1 humita, 1 presa (pollo, chancho, carnero)',
+    image: '/saucer/pachamanca1.png',
     rating: {
-      count: 85,
+      count: 100,
       rate: 4.5
     }
   },
   {
-    id: 'price_1JAEABEy9j6mAC9eYTnD6Rv7',
-    name: 'Monstera Deliciosa (L)',
-    price: 5995,
-    currency: 'USD',
-    image: '/plants/monstera-deliciosa.png',
+    id: 'price_1K9KmIKfLWhjfm3akh4Gdm3U',
+    name: 'Pachamanca con dos presas',
+    price: 3100,
+    currency: 'PEN',
+    description: '3 papas, Porción de habas, 1 humita, 2 presas (pollo, chancho, carnero)',
+    image: '/saucer/pachamanca2.png',
     rating: {
-      count: 137,
+      count: 90,
       rate: 4.5
     }
   },
   {
-    id: 'price_1JAEAjEy9j6mAC9e1jK4nxds',
-    name: 'Alocasia Zebrina',
-    price: 2995,
-    currency: 'USD',
-    image: '/plants/alocasia-zebrina.png',
+    id: 'price_1K9KnZKfLWhjfm3apt7slt8j',
+    name: 'Pachamanca con tres presas',
+    price: 4000,
+    currency: 'PEN',
+    description: '3 papas, Porción de habas, 1 humita, 3 presas (pollo, chancho, carnero)',
+    image: '/saucer/pachamanca3.png',
     rating: {
-      count: 104,
-      rate: 4
+      count: 90,
+      rate: 4.6
     }
   },
   {
-    id: 'price_1JAEBeEy9j6mAC9ewOgehqP6',
-    name: 'Cactus Euphorbia (L)',
-    price: 4995,
-    currency: 'USD',
-    image: '/plants/euphorbia.png',
+    id: 'price_1K9KpqKfLWhjfm3aIhOctGL6',
+    name: 'Pachamanca con presa de cuy',
+    price: 3100,
+    currency: 'PEN',
+    description: '3 papas, Porción de habas, 1 humita, 1 presa (cuy)',
+    image: '/saucer/pachamanca4.png',
     rating: {
-      count: 213,
-      rate: 5
-    }
-  },
-  {
-    id: 'price_1JAEBxEy9j6mAC9eJFypGxjc',
-    name: 'Calathea Orbifolia',
-    price: 2995,
-    currency: 'USD',
-    image: '/plants/calathea-orbifolia.png',
-    rating: {
-      count: 78,
-      rate: 4
-    }
-  },
-  {
-    id: 'price_1JAECJEy9j6mAC9epK9RoNwV',
-    name: 'Calathea Medallion',
-    price: 2995,
-    currency: 'USD',
-    image: '/plants/calathea-medallion.png',
-    rating: {
-      count: 89,
-      rate: 5
-    }
-  },
-  {
-    id: 'price_1JAECWEy9j6mAC9eapjaRm9M',
-    name: 'Calathea Ornata',
-    price: 2995,
-    currency: 'USD',
-    image: '/plants/calathea-ornata.png',
-    rating: {
-      count: 271,
-      rate: 5
-    }
-  },
-  {
-    id: 'price_1JAECpEy9j6mAC9etXk35nRL',
-    name: 'Zamioculcas (L)',
-    price: 3995,
-    currency: 'USD',
-    image: '/plants/zamioculcas.png',
-    rating: {
-      count: 78,
-      rate: 4
+      count: 100,
+      rate: 4.9
     }
   }
 ];
