@@ -14,20 +14,16 @@ const Meta = ({ title, description, image }: IMeta) => (
     <meta
       property='og:description'
       name='og:description'
-      content={SEO.openGraph.description}
+      content={SEO.description}
     />
     <meta property='og:url' name='og:url' content={SEO.openGraph.url} />
-    <meta
-      property='og:image'
-      name='og:image'
-      content={SEO.openGraph.image.src}
-    />
+    <meta property='og:image' name='og:image' content={image?.src} />
     <meta name='twitter:card' content='summary_large_image' />
     <meta name='twitter:site' content='jochizan' />
     <meta name='twitter:title' content={title} />
     <meta name='twitter:creator' content='jochizan' />
-    <meta name='twitter:description' content={SEO.openGraph.description} />
-    <meta name='twitter:image' content={SEO.openGraph.image.src} />
+    <meta name='twitter:description' content={SEO.description} />
+    <meta name='twitter:image' content={image?.src} />
     <meta name='hostname' content={SEO.hostname} />
   </Head>
 );

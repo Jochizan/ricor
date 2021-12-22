@@ -17,7 +17,7 @@ const TablePage: NextPage = () => {
         backgroundPosition: 'center'
       }}
     >
-      <Meta title='Ricor' description='Mesas' />
+      <Meta title='Ricor' description='Mesas' image={ImageMesas} />
       <div className='mt-16 h-min w-screen-lg flex flex-col bg-amber-300 dark:bg-amber-900 px-2 md:px-4 rounded-lg'>
         <h2 className='text-3xl p-2 md:p-4 text-stone-700 dark:text-stone-100 font-medium'>
           Mesas

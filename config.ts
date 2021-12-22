@@ -1,15 +1,10 @@
-import Home from 'public/restaurantHome.png';
-
 export const SEO = {
   description:
-    'Hola! 👋👋👋 bienvenid@ a mi Portafolio profesional soy Jochizan y soy desarrollador de software para la web 😎',
+    'Restaurante Ricor para comer y beber en la incontrastable Huancayo, con una carta de comida y bebida de primera calidad. ������',
   author: 'Jochizan',
-  hostname: '',
+  hostname: 'ricor.vercel.app',
   openGraph: {
     type: 'website',
-    url: '',
-    description:
-      'Hola! 👋👋👋 bienvenid@ a mi Portafolio profesional soy Jochizan y soy desarrollador de software para la web 😎',
-    image: Home
+    url: 'https://ricor.vercel.app',
   }
 };

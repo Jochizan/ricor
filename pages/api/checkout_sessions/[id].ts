@@ -10,12 +10,14 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const id = req.query.id as string;
-
-  if (!id.startsWith('cs_')) {
-    throw Error('Incorrect Checkout ID.');
-  }
-
   try {
+    if (!id.startsWith('cs_')) {
+      throw Error('Incorrect Checkout ID.');
+    }
+
+    const checkoutSession = await stripe.checkout.sessions.retrieve(id);
+
+    res.status(200).json(checkoutSession);
   } catch (err: any) {
     res.status(500).json({ statusCode: 500, message: err.message });
   }

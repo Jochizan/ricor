@@ -18,7 +18,7 @@ const ProductsPage: NextPage = () => {
         backgroundPosition: 'center'
       }}
     >
-      <Meta title='Ricor' description='Platillos' />
+      <Meta title='Ricor' description='Platillos' image={ImageCard} />
       <div className='mt-16 h-min w-screen-lg bg-amber-300 dark:bg-amber-900 px-4 rounded-lg'>
         <h2 className='text-3xl p-4 text-stone-700 dark:text-stone-100 font-medium'>
           Platillos Principales

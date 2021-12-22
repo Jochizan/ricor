@@ -13,7 +13,11 @@ const HomePage: NextPage = () => {
         backgroundPosition: 'center'
       }}
     >
-      <Meta title='Ricor' description='Home page restaurante Ricor' />
+      <Meta
+        title='Ricor'
+        description='Home page restaurante Ricor'
+        image={ImageHome}
+      />
     </main>
   );
 };

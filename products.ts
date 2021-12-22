@@ -6,7 +6,7 @@ const products = [
     currency: 'PEN',
     description:
       '3 papas, Porción de habas, 1 humita, 1 presa (pollo, chancho, carnero)',
-    image: '/saucer/pachamanca1.png',
+    image: 'public/saucer/pachamanca1.png',
     rating: {
       count: 100,
       rate: 4.5
@@ -18,7 +18,7 @@ const products = [
     price: 3100,
     currency: 'PEN',
     description: '3 papas, Porción de habas, 1 humita, 2 presas (pollo, chancho, carnero)',
-    image: '/saucer/pachamanca2.png',
+    image: 'public/saucer/pachamanca2.png',
     rating: {
       count: 90,
       rate: 4.5
@@ -30,7 +30,7 @@ const products = [
     price: 4000,
     currency: 'PEN',
     description: '3 papas, Porción de habas, 1 humita, 3 presas (pollo, chancho, carnero)',
-    image: '/saucer/pachamanca3.png',
+    image: 'public/saucer/pachamanca3.png',
     rating: {
       count: 90,
       rate: 4.6
@@ -42,7 +42,7 @@ const products = [
     price: 3100,
     currency: 'PEN',
     description: '3 papas, Porción de habas, 1 humita, 1 presa (cuy)',
-    image: '/saucer/pachamanca4.png',
+    image: 'public/saucer/pachamanca4.png',
     rating: {
       count: 100,
       rate: 4.9

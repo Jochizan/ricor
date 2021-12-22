@@ -8,9 +8,9 @@ import { formatCurrency } from '@libs/utils';
 import getStripe from '@libs/get_stripe';
 import {
   XCircleIcon,
-  XIcon,
   MinusSmIcon,
-  PlusSmIcon
+  PlusSmIcon,
+  XIcon,
 } from '@heroicons/react/outline';
 import ImageCart from 'public/misc.png';
 import Meta from '@components/Meta';

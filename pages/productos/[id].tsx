@@ -58,7 +58,11 @@ const Product: FC<any> = (props) => {
           </>
         ) : (
           <div className='container lg:max-w-screen-lg mx-auto py-12 px-6'>
-            <Meta title='Platillos' description={`${props.name}`} />
+            <Meta
+              title='Platillos'
+              description={`${props.name}`}
+              image={ImageCard}
+            />
             <div className='flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-12 '>
               {/* Product's image */}
               <div className='relative w-72 h-72 sm:w-96 sm:h-96'>

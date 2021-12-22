@@ -1,7 +1,7 @@
 interface IMeta {
   title: string;
   description?: string;
-  image?: string;
+  image?: StaticImageData;
 }
 
 export type { IMeta }

@@ -26,7 +26,7 @@ const ReservationPage: NextPage = () => {
         backgroundPosition: 'center'
       }}
     >
-      <Meta title='Ricor' description='Reservas' />
+      <Meta title='Ricor' description='Reservas' image={ImageReservas} />
       <div className='max-w-screen-sm w-full mt-16 h-min w-screen-lg bg-amber-300 dark:bg-amber-900 px-4 pb-4 rounded-lg'>
         <h2 className='text-3xl p-4 text-stone-700 dark:text-stone-100 font-medium'>
           Inicio
