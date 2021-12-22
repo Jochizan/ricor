@@ -2,11 +2,12 @@ import ProductCard from '@components/ProductCard';
 import ImageCard from 'public/restaurantCard.png';
 import Meta from '@components/Meta';
 import type { NextPage } from 'next';
-import products from 'products';
+import { products } from '@hooks/useShoppingCart';
 import { useState } from 'react';
 
 const ProductsPage: NextPage = () => {
   const [disabled, setDisabled] = useState(false);
+
 
   return (
     <main
