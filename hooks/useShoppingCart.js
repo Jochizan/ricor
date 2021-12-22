@@ -1,7 +1,7 @@
 import { TYPES } from '../actions/shoppingActions';
 import useLocalStorageReducer from './useLocalStorageReducer';
 import { createContext, useMemo, useContext } from 'react';
-import { products } from 'products';
+import { products } from '../pages/products';
 
 export const shoppingInitialState = {
   products,
