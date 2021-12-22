@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useShoppingCart } from '@hooks/useShoppingCart.js';
 import axios from 'axios';
+import { useShoppingCart } from '@hooks/useShoppingCart.js';
 import { formatCurrency } from '@libs/utils';
 import getStripe from '@libs/get_stripe';
 import {
@@ -35,6 +35,8 @@ const CartPage: NextPage = () => {
     const stripe = await getStripe();
     await stripe.redirectToCheckout({ sessionId: id });
   };
+
+  console.log(cart);
 
   return (
     <main
