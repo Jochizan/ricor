@@ -2,6 +2,8 @@ import pachamanca1 from 'assets/pachamanca1.png';
 import pachamanca2 from 'assets/pachamanca2.png';
 import pachamanca3 from 'assets/pachamanca3.png';
 import pachamanca4 from 'assets/pachamanca4.png';
+import type { NextPage } from 'next';
+import Image from 'next/image';
 
 export const products = [
   {
@@ -56,3 +58,15 @@ export const products = [
     }
   }
 ];
+
+const ProductPage: NextPage = () => {
+  return (
+    <>
+      {products.map((product) => (
+        <Image key={product.id} src={product.image} alt={product.name} />
+      ))}
+    </>
+  );
+};
+
+export default ProductPage;
